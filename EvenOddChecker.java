@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 public class EvenOddChecker {
 
-    public static int getIntegerInput(Scanner scanner) {
+    public static int getIntegerInput(Scanner input) {
         System.out.print("Enter an integer: ");
 
-        while (!scanner.hasNextInt()) {
+        while (!input.hasNextInt()) {
             System.out.println("Invalid input! Please enter a valid number.");
-            scanner.next();
+            input.next();
             System.out.print("Enter an integer: ");
         }
 
-        return scanner.nextInt();
+        return input.nextInt();
     }
 
     public static String checkEvenOrOdd(int number) {
@@ -23,12 +23,12 @@ public class EvenOddChecker {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        int number = getIntegerInput(scanner);
+        int number = getIntegerInput(input);
         String result = checkEvenOrOdd(number);
         System.out.println(result);
 
-        scanner.close();
+        input.close();
     }
 }
